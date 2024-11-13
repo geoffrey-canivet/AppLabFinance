@@ -70,16 +70,24 @@ p {
     margin: 0;
 }
 
+h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
 .row {
     margin-left: 20px;
     margin-right: 20px;
 }
+
+/* CARD */
 .card {
     border: none;
     background-color: transparent;
     margin: 0px 5px 20px 5px;
 }
 
+/* CARD HEADER */
 .card-header {
     background-color: #272730;
 }
@@ -88,6 +96,7 @@ p {
     color: white;
     font-family: 'Poppins-semibold', sans-serif;
     font-size: 18px;
+    margin-left: 15px;
 }
 
 .card-header-right img{
@@ -95,6 +104,7 @@ p {
     margin-left: 10px;
 }
 
+/* CARD BODY */
 .card-body {
     background-color: #2D2D37;
 }
@@ -102,12 +112,12 @@ p {
 .card_txt_item {
     color: rgb(255, 255, 255);
     font-family: 'Poppins-medium', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .card_number_item{
     color: white;
-    font-family: 'Poppins-extralight', sans-serif;
+    font-family: 'Poppins-light', sans-serif;
     font-size: 14px;
 }
 
@@ -118,7 +128,7 @@ p {
 }
 
 .container-btn-item img {
-    width: 22px;
+    width: 18px;
     margin-left: 10px;
 }
 
@@ -126,10 +136,17 @@ tr {
     border-bottom: 1px solid rgba(255, 255, 255, 0.130);
 }
 
+.card-body .table-card td {
+    background-color: #2D2D37;
+    margin: 20px;
+}
+
 .table>:not(caption)>*>* {
     padding-bottom: 15px;
     padding-top: 15px;
 }
+
+/* CARD FOOTER */
 .card-footer {
     background-color: #272730;
     color: white;
@@ -137,21 +154,50 @@ tr {
 
 .card_footer_text {
     color: rgba(255, 255, 255, 0.44);
-    font-family: 'Poppins-semibold', sans-serif;
+    font-family: 'Poppins-medium', sans-serif;
     font-size: 13px;
 }
 
 .card_footer_number {
     color: white;
-    font-family: 'Poppins-extralight', sans-serif;
     font-size: 14px;
+    font-family: 'Poppins-light', sans-serif;
+
 }
 
 .card_footer_border_right {
     border-right: 1px solid rgba(255, 255, 255, 0.130);
 }
 
-.card-body .table-card td {
-    background-color: #2D2D37;
-    margin: 20px;
+/* ScrollBar */
+.card-body .scrollbar-tab {
+    max-height: 300px;
+    min-height: 300px;
+    overflow-y: auto;
 }
+
+/* Modifier la largeur de la scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* verticale */
+    height: 10px; /* horizontale */
+}
+
+/* arrière-plan de la scrollbar */
+::-webkit-scrollbar-track {
+    background: #2D2D37;
+}
+
+/* la poignée de la scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #2D2D37; /* Couleur de la poignée */
+    opacity: 0;
+    border-radius: 10px; /* Coins arrondis */
+}
+
+/* Modifier le thumb lorsque l'on survole avec la souris */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Couleur de la poignée au survol */
+}
+
+
+

@@ -1,0 +1,110 @@
+
+// CHARGES
+Electricité
+Loyer
+Eau
+Gaz
+Chauffage
+
+// CREDITS
+Hypothéquaire
+Voiture
+Personnel
+Carte de crédit
+Etidiant
+Travaux
+Consomation
+
+// ASSURANCES
+Hospitalisation
+Incendie
+Habitation
+Syndicat
+Automobile
+Civile
+Vie
+Animaux
+Accident
+
+// ABONNEMENTS
+Cloud
+Netflix
+Internet
+Téléphone
+Press
+Musique
+Club
+Transport
+Jeux vidéo
+
+// COURRANTES
+Alimentaire
+Cigarette
+Carburant
+Fastfood
+Livraison repas
+Nourriture animaux
+Produit entretien
+
+
+// LOISIRS
+Spactacle
+Restaurant
+Concert
+Jardinage
+Decoration
+Voyage
+Cinéma
+Sport
+
+// OCCASIONNELLES
+Coiffeur
+Salon de beauté
+Médecin
+Médicaments
+Vêtements
+Vétérinaire
+Cadeaux
+Scolarité
+
+
+// AUTRES
+Impot
+Avocat
+Comptable
+Entretien chaudière
+Investissements
+Frais accident
+Stationnement
+Donations
+Frais bancaires
+
+// PRINCIPAL
+Salaire de base
+Heures supp
+Primes
+Commissions
+Travail indépendant
+
+// SECONDAIRE
+Intérêts épargne
+Freelancing
+Revenu locatif
+Cryptomonnaies
+Dividendes
+Royalties
+
+// AIDES
+Allocations familiales
+Chômage
+Aide au logement
+Penstion alimentaire
+Subventions
+
+// EXEPTIONNEL
+Gains Jeux
+Remboursements
+Vente de biens
+Cadeaux
+
+
