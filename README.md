@@ -45,7 +45,7 @@
   - 8/ Accordion de visualisation graphique et comparaison.
   - 9/ Footer bar, mémoire local storage utilisée, logo applab, heure.
 
-  ![APLF-dashboard-details.png](https://github.com/geoffrey-canivet/Technofuturtic/blob/main/Readme/APLF-dashboard-details.png)
+  ![APLF-dashboard-details.png](APLF-dashboard-details.png)
 
 ---
 
@@ -65,10 +65,10 @@
   - 8/ scrollbar.
   - 9/ Total de la carte de dépense. 
 
-![APLF-card-fixe-details.png](https://github.com/geoffrey-canivet/Technofuturtic/blob/main/Readme/APLF-card-fixe-details.png)
-![APLF-card-fixe-graphique-details.png](https://github.com/geoffrey-canivet/Technofuturtic/blob/main/Readme/APLF-card-fixe-graphique-details.png)
-![APLF-card-fixe-ajout-categorie-details.png](https://github.com/geoffrey-canivet/Technofuturtic/blob/main/Readme/APLF-card-fixe-ajout-categorie-details.png)
-![APLF-card-fixe-modifiert-categorie-details.png](https://github.com/geoffrey-canivet/Technofuturtic/blob/main/Readme/APLF-card-fixe-modifiert-categorie-details.png)
+![APLF-card-fixe-details.png](APLF-card-fixe-details.png)
+![APLF-card-fixe-graphique-details.png](APLF-card-fixe-graphique-details.png)
+![APLF-card-fixe-ajout-categorie-details.png](APLF-card-fixe-ajout-categorie-details.png)
+![APLF-card-fixe-modifiert-categorie-details.png](APLF-card-fixe-modifiert-categorie-details.png)
 
 ---
 
@@ -98,10 +98,10 @@
   - 9/ scrollbar.
   - 10/ Total de la carte de dépense. 
 
-![APLF-card-fixe-details.png](https://github.com/geoffrey-canivet/Technofuturtic/blob/main/Readme/APLF-card-occasionnelle-details.png)
-![APLF-card-fixe-graphique-details.png](https://github.com/geoffrey-canivet/Technofuturtic/blob/main/Readme/APLF-card-occasionnelle-graphique-details.png)
-![APLF-card-fixe-ajout-categorie-details.png](https://github.com/geoffrey-canivet/Technofuturtic/blob/main/Readme/APLF-card-coccasionnelle-ajout-categorie-details.png)
-![APLF-card-fixe-modifiert-categorie-details.png](https://github.com/geoffrey-canivet/Technofuturtic/blob/main/Readme/APLF-card-coccasionnelle-ajout-depense-details.png)
+![APLF-card-fixe-details.png](APLF-card-occasionnelle-details.png)
+![APLF-card-fixe-graphique-details.png](APLF-card-occasionnelle-graphique-details.png)
+![APLF-card-fixe-ajout-categorie-details.png](APLF-card-coccasionnelle-ajout-categorie-details.png)
+![APLF-card-fixe-modifiert-categorie-details.png](APLF-card-coccasionnelle-ajout-depense-details.png)
 
 ---
 
@@ -120,7 +120,7 @@
   - 7/ Pourcentage de progression.
   - 8/ Outils.
 
-![APLF-card-fixe-modifiert-categorie-details.png](https://github.com/geoffrey-canivet/Technofuturtic/blob/main/Readme/APLF-table-coccasionnelle-details.png)
+![APLF-card-fixe-modifiert-categorie-details.png](APLF-table-coccasionnelle-details.png)
 
 ---
 
@@ -137,21 +137,36 @@
   - 5/ déconnexte l'utilisateur et renvois vers l'index. 
 
 
-![APLF-card-fixe-modifiert-categorie-details.png](https://github.com/geoffrey-canivet/Technofuturtic/blob/main/Readme/APLF-menu-droite-details.png)
+![APLF-card-fixe-modifiert-categorie-details.png](APLF-menu-droite-details.png)
 
 ---
 
+
 ### Technologies
 
-- Html
-- Css
-  - Bootstrap
-  - Sass
-- Javascript
-  - JQuery 
-  - Flickity (Pour le slider récapitulatif) [Lien](https://flickity.metafizzy.co/)
-  - Chart.js (Pour les graphiques) [Lien](https://www.chartjs.org/)
-  - SweetAlert (Pour les alerts) [Lien](https://sweetalert2.github.io/)
-  - DataTables (Pour les tableau détaillé) [Lien](https://datatables.net/)
+  - **Html**
+  - **Css**
+  - **Sass**
+  - **Javascript**
+  - **Express**
+  - **React + version React native**
+  - **PostgreSQL**
 
+### Dépendances
+
+  - **Bootstrap** [Lien](https://getbootstrap.com/)
+  - **JQuery** [Lien](https://jquery.com/)
+  - **Flickity** (Pour le slider récapitulatif) [Lien](https://flickity.metafizzy.co/)
+  - **Chart.js** (Pour les graphiques) [Lien](https://www.chartjs.org/)
+  - **SweetAlert** (Pour les alerts) [Lien](https://sweetalert2.github.io/)
+  - **DataTables** (Pour les tableaux) [Lien](https://datatables.net/)
+
+### Assets
+
+- **Google Fonts**
+  - Poppins [Lien](https://fonts.google.com/specimen/Poppins)
+  - Noto Sans [Lien](https://fonts.google.com/noto/specimen/Noto+Sans)
+- **Dafont** 
+  - Game Of Squids [Lien](https://www.dafont.com/fr/game-of-squids.font?text=LAB)
+- **Bootstrap Ico** [Lien](https://icons.getbootstrap.com/)
 ---
