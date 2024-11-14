@@ -1,3 +1,4 @@
+![APLF-dashboard-details.png](logo.png)
 # AppLab Finance.
 ## Guide utilisateur.
 
