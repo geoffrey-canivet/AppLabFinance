@@ -155,8 +155,3 @@
   - DataTables (Pour les tableau détaillé) [Lien](https://datatables.net/)
 
 ---
-
-
-git add .
-git commit -m ".md"
-git push 
