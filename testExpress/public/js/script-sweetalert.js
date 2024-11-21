@@ -1,73 +1,63 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const button = document.getElementById('inputButton');
-    button.addEventListener('click', async function() {
-        try {
-            // Affiche la boîte de dialogue SweetAlert pour l'entrée utilisateur
-            const { value: userInput } = await Swal.fire({
-                title: 'Entrez une information',
-                input: 'text',
-                inputPlaceholder: 'Tapez quelque chose...'
-            });
-
-            // Vérifie si l'utilisateur a saisi quelque chose
-            if (userInput) {
-                // Envoie la donnée au serveur avec `fetch()`
-                const response = await fetch('/dashboard/send-data', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ data: userInput })
-                });
-
-                // Vérifie si la requête a réussi
-                if (response.ok) {
-                    const data = await response.json();
-                    console.log('Succès:', data);
-                    Swal.fire('Succès', 'Les informations ont été envoyées!', 'success');
-                } else {
-                    throw new Error('Erreur lors de l\'envoi des données');
-                }
-            }
-        } catch (error) {
-            console.error('Erreur:', error);
-            Swal.fire('Erreur', 'Impossible d\'envoyer les informations', 'error');
-        }
-    });
-
     const button2 = document.getElementById('btnAjoutNomDepFixe');
     button2.addEventListener('click', async function() {
         try {
-            // Affiche la boîte de dialogue SweetAlert pour l'entrée utilisateur
             const { value: userInput } = await Swal.fire({
-                title: 'Entrez une information',
+                title: 'Nouvelle charge',
                 input: 'text',
-                inputPlaceholder: 'Tapez quelque chose...'
+                inputPlaceholder: 'Ex: Eau, gaz, ...'
             });
 
-            // Vérifie si l'utilisateur a saisi quelque chose
             if (userInput) {
-                // Envoie la donnée au serveur avec `fetch()`
-                const response = await fetch('/dashboard/send-data', {
+                const body = JSON.stringify({ name: userInput });
+                console.log('Données envoyées:', body);
+
+                const response = await fetch('/charges/addItem', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ data: userInput })
+                    body: body
                 });
 
-                // Vérifie si la requête a réussi
+                // Logs pour déboguer
+                console.log('Statut de la réponse:', response.status);
+                const responseBody = await response.text();
+                console.log('Réponse brute du serveur:', responseBody);
+
                 if (response.ok) {
-                    const data = await response.json();
-                    console.log('Succès:', data);
+                    const data = JSON.parse(responseBody);
+                    console.log('Réponse JSON:', data);
                     Swal.fire('Succès', 'Les informations ont été envoyées!', 'success');
                 } else {
-                    throw new Error('Erreur lors de l\'envoi des données');
+                    throw new Error(`Erreur: Statut ${response.status}`);
                 }
             }
         } catch (error) {
-            console.error('Erreur:', error);
+            console.error('Erreur:', error.message);
             Swal.fire('Erreur', 'Impossible d\'envoyer les informations', 'error');
         }
-    })
+    });
 });
+
+const delItemCharge = async (btn) => {
+    itemId = btn.id;
+    Swal.fire({
+        title: "Supprimer la charge?",
+        text: "Vous ne pourrez pas revenir en arriere!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Oui, supprimer!"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: "Supprimé!",
+                text: "La charge a été supprimée avec succes",
+                icon: "success"
+            });
+        }
+    });
+}
+
