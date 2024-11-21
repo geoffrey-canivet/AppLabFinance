@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="13.229167mm"
+   height="13.229167mm"
+   viewBox="0 0 13.229167 13.229167"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="btn_plus.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.69219276"
+     inkscape:cx="39.006476"
+     inkscape:cy="46.952239"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-94.720836,-135.99584)">
+    <g
+       id="g2"
+       transform="matrix(2.4117144,0,0,2.4117144,-121.79368,-213.34292)">
+      <rect
+         style="fill:#a9a9ac;fill-opacity:1;stroke-width:11.9114;stroke-linejoin:round;stop-color:#000000"
+         id="rect1403"
+         width="5.4853787"
+         height="5.4853787"
+         x="89.776184"
+         y="144.8508"
+         ry="0.85465604" />
+      <g
+         id="g1256"
+         transform="translate(-6.6851366,31.964479)"
+         style="fill:#2d2d37;fill-opacity:1">
+        <rect
+           style="fill:#2d2d37;fill-opacity:1;stroke-width:5.2312;stroke-linejoin:round;stop-color:#000000"
+           id="rect985"
+           width="3.2274899"
+           height="0.82149535"
+           x="97.590271"
+           y="115.23235"
+           ry="0.24644859" />
+        <rect
+           style="fill:#2d2d37;fill-opacity:1;stroke-width:5.2312;stroke-linejoin:round;stop-color:#000000"
+           id="rect985-0"
+           width="3.2274899"
+           height="0.82149535"
+           x="114.02936"
+           y="-99.614761"
+           ry="0.24644859"
+           transform="rotate(90)" />
+      </g>
+    </g>
+  </g>
+</svg>

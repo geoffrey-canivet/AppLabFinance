@@ -1,0 +1,143 @@
+/* CARD */
+.card {
+    border: none;
+    background-color: transparent;
+    margin: 0px 5px 20px 5px;
+    min-width: 250px;
+}
+
+/* CARD HEADER */
+.card-header {
+    background-color: #272730;
+}
+
+.card_header_txt {
+    color: white;
+    font-family: 'Poppins-semibold', sans-serif;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.card-header-right img{
+    width: 15px;
+    margin-left: 10px;
+}
+
+/* CARD BODY */
+.card-body {
+    background-color: #2D2D37;
+}
+
+.card_txt_item {
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins-medium', sans-serif;
+    font-size: 14px;
+}
+
+.card_number_item{
+    color: white;
+    font-family: 'Poppins-light', sans-serif;
+    font-size: 14px;
+}
+
+.card_number_item span{
+    color: white;
+    font-family: 'Poppins-extralight', sans-serif;
+    font-size: 14px;
+}
+
+.container-btn-item img {
+    width: 18px;
+    margin-left: 10px;
+}
+
+tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.130);
+}
+
+.card-body .table-card td {
+    background-color: #2D2D37;
+    margin: 20px;
+}
+
+.table>:not(caption)>*>* {
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+/* CARD FOOTER */
+.card-footer {
+    background-color: #272730;
+    color: white;
+}
+
+.card_footer_text {
+    color: rgba(255, 255, 255, 0.44);
+    font-family: 'Poppins-medium', sans-serif;
+    font-size: 13px;
+}
+
+.card_footer_number {
+    color: white;
+    font-size: 14px;
+    font-family: 'Poppins-light', sans-serif;
+
+}
+
+.card_footer_border_right {
+    border-right: 1px solid rgba(255, 255, 255, 0.130);
+}
+
+/* ScrollBar */
+.card-body .scrollbar-tab {
+    max-height: 300px;
+    min-height: 300px;
+    overflow-y: auto;
+}
+
+/* Modifier la largeur de la scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* verticale */
+    height: 10px; /* horizontale */
+}
+
+/* arrière-plan de la scrollbar */
+::-webkit-scrollbar-track {
+    background: #2D2D37;
+}
+
+/* la poignée de la scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #2D2D37; /* Couleur de la poignée */
+    opacity: 0;
+    border-radius: 10px; /* Coins arrondis */
+}
+
+/* Modifier le thumb lorsque l'on survole avec la souris */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Couleur de la poignée au survol */
+}
+
+@media (max-width: 1200px) {
+    .card {
+        margin-bottom: 15px;
+    }
+    .col-xl-3 {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}
+
+@media (max-width: 992px) {
+    .col-lg-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,45 @@
+aside#sidebar.sidebar
+    ul.sidebar-nav#sidebar-nav
+        li.nav-item
+            a.nav-link.collapsed(href="index.html")
+                i.bi.bi-grid
+                span Dashboard
+            //- End Dashboard Nav
+
+        li.nav-item
+            a.nav-link.collapsed(data-bs-target="#components-nav" data-bs-toggle="collapse" href="#")
+                i.bi.bi-tools
+                span Outils
+                i.bi.bi-chevron-down.ms-auto
+            ul#components-nav.nav-content.collapse(data-bs-parent="#sidebar-nav")
+                li
+                    a(href="components-alerts.html")
+                        i.bi.bi-circle
+                        span Calculatrice
+                li
+                    a(href="components-accordion.html")
+                        i.bi.bi-circle
+                        span Accordion
+                li
+                    a(href="components-badges.html")
+                        i.bi.bi-circle
+                        span Badges
+                li
+                    a(href="components-breadcrumbs.html")
+                        i.bi.bi-circle
+                        span Breadcrumbs
+            //- End Components Nav
+
+        li.nav-heading Utilisateur
+
+        li.nav-item
+            a.nav-link.collapsed(href="users-profile.html")
+                i.bi.bi-person
+                span Profile
+            //- End Profile Page Nav
+
+        li.nav-item
+            a.nav-link.collapsed(href="pages-faq.html")
+                i.bi.bi-question-circle
+                span F.A.Q
+            //- End F.A.Q Page Nav

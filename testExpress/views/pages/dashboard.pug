@@ -1,0 +1,105 @@
+extends ../layouts/main-layout.pug
+
+block content
+        button#inputButton Envoyer des informations
+        .accordion#accordion
+            //- Dépenses fixes
+            .accordion-item.mb-3
+                h2.accordion-header#headingOne
+                    button.accordion-button.collapsed(
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="false"
+                        aria-controls="collapseOne"
+                    )
+                        .accordion_btn_title
+                            i.bi.bi-bank2(style="font-size: 1.5rem; color: #0E7FC4; margin-right: 10px")
+                            | Dépenses fixe
+                #collapseOne.accordion-collapse.collapse(
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordion"
+                    style=""
+                )
+                    .accordion-body
+                        include dashboard-fixe
+            //- Dépenses occasionnelles
+            .accordion-item.mb-3
+                h2.accordion-header#headingTwo
+                    button.accordion-button.collapsed(
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                    )
+                        .accordion_btn_title
+                            i.bi.bi-basket2-fill(style="font-size: 1.5rem; color: #DC3545; margin-right: 10px")
+                            | Dépenses occasionnelles
+                #collapseTwo.accordion-collapse.collapse(
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordion"
+                    style=""
+                )
+                    .accordion-body
+
+            //- Revenu
+            .accordion-item.mb-3
+                h2.accordion-header#headingThree
+                    button.accordion-button.collapsed(
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                    )
+                        .accordion_btn_title
+                            i.bi.bi-piggy-bank-fill(style="font-size: 1.5rem; color: #4A9667; margin-right: 10px")
+                            | Revenu
+                #collapseThree.accordion-collapse.collapse(
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordion"
+                    style=""
+                )
+                    .accordion-body
+
+            //- Mois courant
+            .accordion-item.mb-3
+                h2.accordion-header#headingFour
+                    button.accordion-button.collapsed(
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                    )
+                        .accordion_btn_title
+                            i.bi.bi-calendar-week-fill(style="font-size: 1.5rem; color: #A64AC9; margin-right: 10px")
+                            | Mois courant
+                #collapseFour.accordion-collapse.collapse(
+                    aria-labelledby="headingFour"
+                    data-bs-parent="#accordion"
+                    style=""
+                )
+                    .accordion-body
+
+            //- Comparatifs
+            .accordion-item.mb-3
+                h2.accordion-header#headingFive
+                    button.accordion-button.collapsed(
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                    )
+                        .accordion_btn_title
+                            i.bi.bi-clipboard-data-fill(style="font-size: 1.5rem; color: #EEB902; margin-right: 10px")
+                            | Comparatifs
+                #collapseFive.accordion-collapse.collapse(
+                    aria-labelledby="headingFive"
+                    data-bs-parent="#accordion"
+                    style=""
+                )
+                    .accordion-body
+

@@ -1,0 +1,94 @@
+header#header.header.fixed-top.d-flex.align-items-center
+    .d-flex.align-items-center.justify-content-between
+        a.logo.d-flex.align-items-center(href="#")
+            img(src="/img/applabLogo.png" alt="")
+            //- span.d-none.d-lg-block AppLab (commentaire)
+        i.bi.bi-list.toggle-sidebar-btn(style="font-size: 1.5rem; color: #ffffff")
+    //- End Logo
+
+    nav.header-nav.ms-auto
+        ul.d-flex.align-items-center
+            //- Notification Dropdown
+            li.nav-item.dropdown
+                a.nav-link.nav-icon(href="#" data-bs-toggle="dropdown")
+                    i.bi.bi-question-circle-fill(style="font-size: 1.5rem; color: #01A3FF")
+                    //- span.badge.bg-primary.badge-number 4 (commentaire)
+                ul.dropdown-menu.dropdown-menu-end.dropdown-menu-arrow.notifications
+                    li.dropdown-header
+                        | You have 4 new notifications
+                        a(href="#")
+                            span.badge.rounded-pill.bg-primary.p-2.ms-2 View all
+                    li
+                        hr.dropdown-divider
+                    li.notification-item
+                        i.bi.bi-exclamation-circle.text-warning
+                        div
+                            h4 Lorem Ipsum
+                            p Quae dolorem earum veritatis oditseno
+                            p 30 min. ago
+                    li
+                        hr.dropdown-divider
+                    li.notification-item
+                        i.bi.bi-x-circle.text-danger
+                        div
+                            h4 Atque rerum nesciunt
+                            p Quae dolorem earum veritatis oditseno
+                            p 1 hr. ago
+                    li
+                        hr.dropdown-divider
+                    li.notification-item
+                        i.bi.bi-check-circle.text-success
+                        div
+                            h4 Sit rerum fuga
+                            p Quae dolorem earum veritatis oditseno
+                            p 2 hrs. ago
+                    li
+                        hr.dropdown-divider
+                    li.notification-item
+                        i.bi.bi-info-circle.text-primary
+                        div
+                            h4 Dicta reprehenderit
+                            p Quae dolorem earum veritatis oditseno
+                            p 4 hrs. ago
+                    li
+                        hr.dropdown-divider
+                    li.dropdown-footer
+                        a(href="#") Show all notifications
+                //- End Notification Dropdown Items
+            //- End Notification Nav
+
+            //- Profile Dropdown
+            li.nav-item.dropdown.pe-3
+                a.nav-link.nav-profile.d-flex.align-items-center.pe-0(href="#" data-bs-toggle="dropdown")
+                    img(src="../../img/avat.png" alt="Profile")
+                ul.dropdown-menu.dropdown-menu-end.dropdown-menu-arrow.profile
+                    li.dropdown-header
+                        h6 Kevin Anderson
+                        span Web Designer
+                    li
+                        hr.dropdown-divider
+                    li
+                        a.dropdown-item.d-flex.align-items-center(href="users-profile.html")
+                            i.bi.bi-person
+                            span My Profile
+                    li
+                        hr.dropdown-divider
+                    li
+                        a.dropdown-item.d-flex.align-items-center(href="users-profile.html")
+                            i.bi.bi-gear
+                            span Account Settings
+                    li
+                        hr.dropdown-divider
+                    li
+                        a.dropdown-item.d-flex.align-items-center(href="pages-faq.html")
+                            i.bi.bi-question-circle
+                            span Need Help?
+                    li
+                        hr.dropdown-divider
+                    li
+                        a.dropdown-item.d-flex.align-items-center(href="#")
+                            i.bi.bi-box-arrow-right
+                            span Sign Out
+                //- End Profile Dropdown Items
+            //- End Profile Nav
+    //- End Icons Navigation
