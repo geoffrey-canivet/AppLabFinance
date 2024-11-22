@@ -4,7 +4,7 @@ module.exports = {
     port: 5432,
     username: 'postgres',
     password: '12345',
-    database: 'web_app_express',
+    database: 'aplfinance',
 /*    option: {
         trustServerCertificate: true
     }*/
