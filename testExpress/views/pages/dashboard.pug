@@ -32,10 +32,14 @@ block content
                 )
                     .accordion-body
                         .row
-                            include card-charges
-                            include card-credits
-                            include card-assurances
-                            include card-abonnements
+                            #contenu-charge
+                                include card-charges
+                            #contenu-credits
+                                include card-credits
+                            #contenu-assurances
+                                include card-assurances
+                            #contenu-abonnements
+                                include card-abonnements
             //- Dépenses occasionnelles
             .accordion-item.mb-3
                 h2.accordion-header#headingTwo

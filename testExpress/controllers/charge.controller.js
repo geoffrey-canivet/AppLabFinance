@@ -1,5 +1,5 @@
 const {Charge} = require('../models');
-
+/*const charges = await Charge.findAll();*/
 
 const chargeController = {
     findAll: async (req, res) => {
@@ -97,6 +97,19 @@ const chargeController = {
             res.status(500).json({
                 error: 'Erreur serveur'
             })
+        }
+    },
+    reloadCharge: async (req, res) => {
+        try {
+            const charges = await Charge.findAll();
+            res.render('./pages/card-charges', { charges }, (err, html) => {
+                if (err) {
+                    return res.status(500).send('Erreur lors du rendu du contenu.');
+                }
+                res.send(html);
+            });
+        } catch (error) {
+            res.status(500).send('Erreur lors de la récupération des données de la base.');
         }
     }
 }

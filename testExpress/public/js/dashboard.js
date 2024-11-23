@@ -177,3 +177,26 @@ const chooseDate = async () => {
         Swal.fire("Departure date", date);
     }
 };
+
+
+// RECHARGER CARD CHARGE
+function rechargerInclude(event) {
+    if (event) {
+        event.preventDefault(); // Empêche le comportement par défaut du navigateur
+    }
+
+    console.log("Début de la fonction rechargerInclude, envoi de la requête à /recharge-card-charges");
+
+    fetch('/charges/recharge-card-charges')
+        .then(response => {
+            console.log(response.status);
+            return response.text()
+        })
+
+        .then(html => {
+            document.getElementById('contenu-charge').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Erreur lors du rechargement de l\'include:', error);
+        });
+}
