@@ -1,5 +1,4 @@
 const {Charge} = require('../models');
-/*const charges = await Charge.findAll();*/
 
 const chargeController = {
     findAll: async (req, res) => {

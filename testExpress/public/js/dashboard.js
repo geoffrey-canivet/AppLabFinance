@@ -1,4 +1,4 @@
-// CREATE
+// CREATE CHARGE
 const createItemCharge = async () => {
     try {
         const { value: userInput } = await Swal.fire({
@@ -19,26 +19,132 @@ const createItemCharge = async () => {
                 body: body
             });
 
-            // Logs pour déboguer
-            console.log('Statut de la réponse:', response.status);
             const responseBody = await response.text();
-            console.log('Réponse brute du serveur:', responseBody);
 
             if (response.ok) {
                 const data = JSON.parse(responseBody);
-                console.log('Réponse JSON:', data);
                 Swal.fire('Succès', 'Les informations ont été envoyées!', 'success');
             } else {
                 throw new Error(`Erreur: Statut ${response.status}`);
             }
+
+            rechargerIncludeCharges()
+
         }
     } catch (error) {
         console.error('Erreur:', error.message);
         Swal.fire('Erreur', 'Impossible d\'envoyer les informations', 'error');
     }
 }
+// CREATE CREDIT
+const createItemCredit = async () => {
+    try {
+        const { value: userInput } = await Swal.fire({
+            title: 'Nouvelle credit',
+            input: 'text',
+            inputPlaceholder: 'as, as, as, ...'
+        });
 
-// DELETE
+        if (userInput) {
+            const body = JSON.stringify({ name: userInput });
+            const response = await fetch('/credits/addItem', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: body
+            });
+
+            const responseBody = await response.text();
+
+            if (response.ok) {
+                const data = JSON.parse(responseBody);
+                Swal.fire('Succès', 'Les informations ont été envoyées!', 'success');
+            } else {
+                throw new Error(`Erreur: Statut ${response.status}`);
+            }
+
+            rechargerIncludeCredit()
+
+        }
+    } catch (error) {
+        console.error('Erreur:', error.message);
+        Swal.fire('Erreur', 'Impossible d\'envoyer les informations', 'error');
+    }
+}
+// CREATE ASSURANCE
+const createItemAssurance = async () => {
+    try {
+        const { value: userInput } = await Swal.fire({
+            title: 'Nouvelle assurance',
+            input: 'text',
+            inputPlaceholder: 'as, as, as, ...'
+        });
+
+        if (userInput) {
+            const body = JSON.stringify({ name: userInput });
+            const response = await fetch('/assurances/addItem', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: body
+            });
+
+            const responseBody = await response.text();
+
+            if (response.ok) {
+                const data = JSON.parse(responseBody);
+                Swal.fire('Succès', 'Les informations ont été envoyées!', 'success');
+            } else {
+                throw new Error(`Erreur: Statut ${response.status}`);
+            }
+
+
+
+        }
+    } catch (error) {
+        console.error('Erreur:', error.message);
+        Swal.fire('Erreur', 'Impossible d\'envoyer les informations', 'error');
+    }
+}
+// CREATE ABONNEMENT
+const createItemAbonnement = async () => {
+    try {
+        const { value: userInput } = await Swal.fire({
+            title: 'Nouvelle Abonnement',
+            input: 'text',
+            inputPlaceholder: 'as, as, as, ...'
+        });
+
+        if (userInput) {
+            const body = JSON.stringify({ name: userInput });
+            const response = await fetch('/abonnements/addItem', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: body
+            });
+
+            const responseBody = await response.text();
+
+            if (response.ok) {
+                const data = JSON.parse(responseBody);
+                Swal.fire('Succès', 'Les informations ont été envoyées!', 'success');
+            } else {
+                throw new Error(`Erreur: Statut ${response.status}`);
+            }
+
+
+
+        }
+    } catch (error) {
+        console.error('Erreur:', error.message);
+        Swal.fire('Erreur', 'Impossible d\'envoyer les informations', 'error');
+    }
+}
+// DELETE CHARGE
 const delItemCharge = async (btn) => {
     try {
         const itemTab = btn.id.split('_');
@@ -69,11 +175,6 @@ const delItemCharge = async (btn) => {
                 body: body
             });
 
-            // Logs pour déboguer
-/*            console.log('Statut de la réponse:', response.status);
-            const responseBody = await response.text();
-            console.log('Réponse brute du serveur:', responseBody);*/
-
             if (response.ok) {
                 Swal.fire({
                     title: "Supprimé!",
@@ -83,13 +184,62 @@ const delItemCharge = async (btn) => {
             } else {
                 throw new Error(`Erreur: Statut ${response.status}`);
             }
+
+            rechargerInclude()
         }
     } catch (error) {
         console.error('Erreur:', error.message);
         Swal.fire('Erreur', 'Impossible de supprimer la charge', 'error');
     }
 };
+// DELETE CREDIT
+const delItemCredit = async (btn) => {
+    try {
+        const itemTab = btn.id.split('_');
+        const itemType = itemTab[1] // voir quand il y aura plusieurs card
+        const itemId = itemTab[2]
 
+        // Afficher une boîte de dialogue pour confirmer la suppression
+        const result = await Swal.fire({
+            title: `Supprimer la charge avec id ${itemId}?`,
+            text: "Vous ne pourrez pas revenir en arrière!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Oui, supprimer!"
+        });
+
+        // Si l'utilisateur confirme
+        if (result.isConfirmed) {
+            const body = JSON.stringify({ id: itemId }); // Créer le corps de la requête
+            console.log('Données envoyées:', body);
+
+            const response = await fetch(`/credits/deleteItem/${itemId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: body
+            });
+
+            if (response.ok) {
+                Swal.fire({
+                    title: "Supprimé!",
+                    text: "La credit a été supprimée avec succès",
+                    icon: "success"
+                });
+            } else {
+                throw new Error(`Erreur: Statut ${response.status}`);
+            }
+
+            /*rechargerIncludeCredit()*/
+        }
+    } catch (error) {
+        console.error('Erreur:', error.message);
+        Swal.fire('Erreur', 'Impossible de supprimer la charge', 'error');
+    }
+};
 // UPDATE
 const updateItemCharge = async (btn) => {
     try {
@@ -179,14 +329,8 @@ const chooseDate = async () => {
 };
 
 
-// RECHARGER CARD CHARGE
-function rechargerInclude(event) {
-    if (event) {
-        event.preventDefault(); // Empêche le comportement par défaut du navigateur
-    }
-
-    console.log("Début de la fonction rechargerInclude, envoi de la requête à /recharge-card-charges");
-
+// RECHARGER CARD CHARGES
+function rechargerIncludeCharge() {
     fetch('/charges/recharge-card-charges')
         .then(response => {
             console.log(response.status);
@@ -195,6 +339,21 @@ function rechargerInclude(event) {
 
         .then(html => {
             document.getElementById('contenu-charge').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Erreur lors du rechargement de l\'include:', error);
+        });
+}
+// RECHARGER CARD CREDITS
+function rechargerIncludeCredit() {
+    fetch('/credits/recharge-card-credits')
+        .then(response => {
+            console.log(response.status);
+            return response.text()
+        })
+
+        .then(html => {
+            document.getElementById('contenu-credit').innerHTML = html;
         })
         .catch(error => {
             console.error('Erreur lors du rechargement de l\'include:', error);
