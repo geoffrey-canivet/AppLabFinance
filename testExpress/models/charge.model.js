@@ -17,12 +17,9 @@ module.exports = (sequelize, DataTypes) => {
             }
         },
         data: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.FLOAT,
             allowNull: false,
             defaultValue: 0.00,
-            validate: {
-                min: 0 // Le prix doit être positif
-            }
         }
 
     })

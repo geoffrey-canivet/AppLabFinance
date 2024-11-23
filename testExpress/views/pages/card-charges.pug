@@ -1,0 +1,37 @@
+// Charges
+.col-xl-3.col-lg-4.col-md-6.col-sm-12
+    .card
+        .card-header.d-flex.justify-content-between
+            .card-header-left.d-flex
+                i.bi.bi-house-fill(style="font-size: 1.5rem; color: #0E7FC4;")
+                .d-flex.align-items-center
+                    p.card_header_txt Charges
+            .card-header-right.d-flex
+                img(src="/img/btn_chart.svg" alt="btn_chart")
+                img(src="/img/btn_plus.svg" alt="btn_plus" onclick="createItemCharge()")
+        .card-body
+            .scrollbar-tab
+                table.table.table-hover.align-middle
+                    tbody.table-card
+                        each charge in charges
+                            tr
+                                td
+                                    p.card_txt_item(id=`name_${charge.id}`)= charge.name
+                                td
+                                    p.card_number_item
+                                        span(id=`data_${charge.id}`)= charge.data
+                                        span  €
+                                td
+                                    .container-btn-item.d-flex.px-0.justify-content-end
+                                        img(src="/img/btn_pen.svg" alt="btn_pen" id=`updateItem_charge_${charge.id}` onclick="updateItemCharge(this)")
+                                        img(src="/img/btn_trash.svg" alt="btn_trash" id=`delItem_charge_${charge.id}` onclick="delItemCharge(this)")
+        .card-footer.d-flex.justify-content-between
+            .col-4.col-footer.text-center.card_footer_border_right
+                p.card_footer_text Mois
+                p.card_footer_number 450.00
+            .col-4.col-footer.text-center.card_footer_border_right
+                p.card_footer_text Trimestre
+                p.card_footer_number 1.350.00
+            .col-4.col-footer.text-center
+                p.card_footer_text Année
+                p.card_footer_number 6.400.00

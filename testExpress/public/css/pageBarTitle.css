@@ -1,0 +1,12 @@
+.bar_page_title {
+    background-color: #2D2D37;
+    border: none;
+    color: white;
+}
+.title_bar_date {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.container_bar_page_date{
+    cursor: pointer;
+}

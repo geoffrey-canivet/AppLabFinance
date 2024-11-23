@@ -1,7 +1,17 @@
 extends ../layouts/main-layout.pug
 
 block content
-        .accordion#accordion
+    .bar_page_title.d-flex.justify-content-between.align-items-center.p-3.rounded.mb-4
+        h3.mb-0 Dashboard
+        .container_bar_page_date.d-flex.align-items-center.rounded
+            p.mb-0.rounded
+                i.bi.bi-calendar-fill
+                |
+                span#btn_date.title_bar_date.rounded(onclick="chooseDate()") 22 novembre 2024
+
+
+
+    .accordion#accordion
             //- Dépenses fixes
             .accordion-item.mb-3
                 h2.accordion-header#headingOne
@@ -21,7 +31,11 @@ block content
                     style=""
                 )
                     .accordion-body
-                        include dashboard-fixe
+                        .row
+                            include card-charges
+                            include card-credits
+                            include card-assurances
+                            include card-abonnements
             //- Dépenses occasionnelles
             .accordion-item.mb-3
                 h2.accordion-header#headingTwo

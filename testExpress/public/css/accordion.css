@@ -31,6 +31,15 @@
     outline: none !important;
     background-color: #1E1E25;
 }
+
+.accordion-button:hover {
+    background-color: #3A3A47;
+}
+
+.accordion-body{
+    padding: 0px;
+    padding-top: 15px;
+}
 .accordion-body{
     padding: 0px;
     padding-top: 15px;
