@@ -15,15 +15,15 @@
                     each assurance in assurances
                         tr
                             td
-                                p.card_txt_item(id=`name_${assurance.id}`)= assurance.name
+                                p.card_txt_item(id=`name_assurance${assurance.id}`)= assurance.name
                             td
                                 p.card_number_item
                                     span(id=`data_${assurance.id}`)= assurance.data
                                     span  €
                             td
                                 .container-btn-item.d-flex.px-0.justify-content-end
-                                    img(src="/img/btn_pen.svg" alt="btn_pen" id=`updateItem_assurance_${assurance.id}` onclick="updateItemassurance(this)")
-                                    img(src="/img/btn_trash.svg" alt="btn_trash" id=`delItem_assurance_${assurance.id}` onclick="delItemassurance(this)")
+                                    img(src="/img/btn_pen.svg" alt="btn_pen" id=`updateItem_assurance_${assurance.id}` onclick="updateItemAssurance(this)")
+                                    img(src="/img/btn_trash.svg" alt="btn_trash" id=`delItem_assurance_${assurance.id}` onclick="delItemAssurance(this)")
     .card-footer.d-flex.justify-content-between
         .col-4.col-footer.text-center.card_footer_border_right
             p.card_footer_text Mois

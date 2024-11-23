@@ -16,14 +16,14 @@
                     each credit in credits
                         tr
                             td
-                                p.card_txt_item(id=`name_${credit.id}`)= credit.name
+                                p.card_txt_item(id=`name_credit${credit.id}`)= credit.name
                             td
                                 p.card_number_item
                                     span(id=`data_${credit.id}`)= credit.data
                                     span  €
                             td
                                 .container-btn-item.d-flex.px-0.justify-content-end
-                                    img(src="/img/btn_pen.svg" alt="btn_pen" id=`updateItem_credit_${credit.id}` onclick="updateItemcredit(this)")
+                                    img(src="/img/btn_pen.svg" alt="btn_pen" id=`updateItem_credit_${credit.id}` onclick="updateItemCredit(this)")
                                     img(src="/img/btn_trash.svg" alt="btn_trash" id=`delItem_credit_${credit.id}` onclick="delItemCredit(this)")
     .card-footer.d-flex.justify-content-between
         .col-4.col-footer.text-center.card_footer_border_right

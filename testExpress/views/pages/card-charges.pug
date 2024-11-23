@@ -16,7 +16,7 @@
                     each charge in charges
                         tr
                             td
-                                p.card_txt_item(id=`name_${charge.id}`)= charge.name
+                                p.card_txt_item(id=`name_charge${charge.id}`)= charge.name
                             td
                                 p.card_number_item
                                     span(id=`data_${charge.id}`)= charge.data

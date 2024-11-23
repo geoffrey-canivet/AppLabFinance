@@ -1,4 +1,4 @@
-const {Credit, Charge} = require('../models');
+const {Credit, credit} = require('../models');
 
 const creditController = {
     findAll: async (req, res) => {
@@ -60,6 +60,44 @@ const creditController = {
             })
         }
     },
+    update: async (req, res) => {
+        try {
+            const id = req.params.id;
+
+            const credit = await Credit.findOne({
+                where: {
+                    id,
+                }
+            })
+
+            if (!credit) {
+                return res.status(404).json({
+                    error: "credit introuvable"
+                })
+            }
+
+            const updateDatas = req.body;
+            await credit.update(updateDatas);
+
+            // upgate mois, trimestre, année
+
+        } catch (err) {
+            if (err.name === 'SequelizeValidationError') {
+                return res.status(400).json({
+                    error: 'Données invalides',
+                    details: err.errors.map(error => ({
+                        field: error.path,
+                        message: error.message
+                    }))
+                })
+            }
+
+            console.error('Error in update', err);
+            res.status(500).json({
+                error: 'Erreur serveur'
+            })
+        }
+    }
 }
 
 

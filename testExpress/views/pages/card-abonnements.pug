@@ -15,7 +15,7 @@
                     each abonnement in abonnements
                         tr
                             td
-                                p.card_txt_item(id=`name_${abonnement.id}`)= abonnement.name
+                                p.card_txt_item(id=`name_abonnement${abonnement.id}`)= abonnement.name
                             td
                                 p.card_number_item
                                     span(id=`data_${abonnement.id}`)= abonnement.data
