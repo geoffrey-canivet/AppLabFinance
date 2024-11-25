@@ -1,0 +1,42 @@
+Table users
+id: Identifiant unique.
+name: Nom de l'utilisateur.
+email: Email de connexion.
+password: Mot de passe (hashé).
+createdAt: Timestamp.
+updatedAt: Timestamp.
+
+
+Table categories
+id: Identifiant unique.
+name: Nom de la catégorie (Charges, Crédits, Revenus, etc.).
+type: Type (dépense fixe, dépense occasionnelle, revenu).
+createdAt: Timestamp.
+updatedAt: Timestamp.
+
+
+Table subcategories
+id: Identifiant unique.
+name: Nom de la sous-catégorie (ex: Electricité, Assurance Vie, Salaire, etc.).
+categoryId: Foreign Key -> categories(id).
+createdAt: Timestamp.
+updatedAt: Timestamp.
+
+
+Table periods
+id: Identifiant unique.
+month: Mois (1-12).
+year: Année (ex: 2024).
+createdAt: Timestamp.
+updatedAt: Timestamp.
+
+
+Table transactions
+id: Identifiant unique.
+userId: Foreign Key -> users(id).
+subcategoryId: Foreign Key -> subcategories(id).
+periodId: Foreign Key -> periods(id).
+amount: Montant de la transaction.
+isExpense: Booléen (true pour dépense, false pour revenu).
+createdAt: Timestamp.
+updatedAt: Timestamp.
