@@ -5,7 +5,7 @@ const subcategoryController = {
         try {
             const subcatsData = [
                 // CHARGES
-                {name: "Electricité", categoryId: 2}, {name: "Eau", categoryId: 1}, {name: "Loyer", categoryId: 1},
+                {name: "Electricité", categoryId: 1}, {name: "Eau", categoryId: 1}, {name: "Loyer", categoryId: 1},
                 // ASSURANCES
                 {name: "Vie", categoryId: 2}, {name: "Maladie", categoryId: 2}, {name: "Civile", categoryId: 2}, {name: "Accident", categoryId: 2},
                 // CREDITS

@@ -3,7 +3,7 @@ const userController = require('../controllers/user.controller');
 
 router.get('/', userController.findAll)
 router.post('/addAll', userController.createMany)
-router.delete('/:id', (req, res) => {})
+router.get('/getAll/:userId', userController.getUserDataByPeriod)
 router.put('/:id', (req, res) => {})
 
 

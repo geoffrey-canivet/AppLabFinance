@@ -8,7 +8,7 @@ const PORT = 7006;
 
 const initDb = async () => {
     try {
-        await db.sequelize.sync({force: true}) // ecrase la db ou pas a chaque lancement du server
+        await db.sequelize.sync({force: false}) // ecrase la db ou pas a chaque lancement du server
         console.log('Database Sequelize Connected')
     } catch (err) {
         console.error('Error connecting to sequelize database')
